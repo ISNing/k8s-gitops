@@ -14,4 +14,4 @@ metadata:
   name: "default-public-ipv6-pool"
 spec:
   blocks:
-  - cidr: "2409:8a04:a010:e550:caf0:::0/112"
+  - cidr: "2409:8a04:a010:e550:caf0::0/112"
