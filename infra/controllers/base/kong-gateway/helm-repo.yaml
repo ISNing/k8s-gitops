@@ -5,6 +5,5 @@ metadata:
   name: kong
   namespace: flux-system
 spec:
-  type: oci
   interval: 12h
-  url: oci://ghcr.io/isning/charts-mirror
+  url: https://charts.konghq.com
