@@ -5,7 +5,7 @@ Repository for my personal kubernetes clusters.
 ## Prerequisites
 
 All my Kubernetes Clusters are deployed via
-[ryan4yin/nix-config/hosts/k8s](https://github.com/ryan4yin/nix-config/tree/main/hosts/k8s).
+[isning/nix-config/hosts/k8s](https://github.com/isning/nix-config/tree/main/hosts/k8s).
 
 ```bash
 nix shell nixpkgs#fluxcd
@@ -13,8 +13,8 @@ nix shell nixpkgs#fluxcd
 
 My personal container images:
 
-- Dockerfile & CI: <https://github.com/ryan4yin/containers>
-- Docker Hub: <https://hub.docker.com/r/ryan4yin>
+- Dockerfile & CI: <https://github.com/isning/containers>
+- Docker Hub: <https://hub.docker.com/r/isning>
 
 ## Bootstrap
 
@@ -26,7 +26,7 @@ Steps to bootstrap a new cluster:
    ```bash
    flux bootstrap git \
    --components-extra image-reflector-controller,image-automation-controller \
-   --url=ssh://git@github.com/ryan4yin/k8s-gitops \
+   --url=ssh://git@github.com/isning/k8s-gitops \
    --branch=main \
    --path=clusters/k3s-test-1
    ```
