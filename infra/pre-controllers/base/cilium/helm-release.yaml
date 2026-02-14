@@ -17,9 +17,22 @@ spec:
         name: cilium
         namespace: flux-system
       interval: 12h
-      version: "1.17.*"
-  # https://github.com/cilium/cilium/tree/v1.17.4/install/kubernetes/cilium
+      version: "1.19.*"
+  # https://github.com/cilium/cilium/tree/v1.19.0/install/kubernetes/cilium
   values:
+    # ======================== Tuning Cilium ========================
+    # https://docs.cilium.io/en/stable/operations/performance/tuning/
+    # https://docs.cilium.io/en/stable/network/kubernetes/kubeproxy-free/
+    kubeProxyReplacement: true
+
+    bandwidthManager:
+      enabled: true
+      bbr: true
+    loadBalancer:
+      mode: dsr
+      acceleration: best-effort
+    bpfClockProbe: true
+
     # ======================== Work with Istio ========================
     # https://docs.cilium.io/en/latest/network/servicemesh/istio/
     cni:
