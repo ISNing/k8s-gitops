@@ -5,6 +5,7 @@ metadata:
   name: jetstack
   namespace: flux-system
 spec:
+  type: oci
   interval: 12h
-  url: https://charts.jetstack.io
+  url: oci://quay.io/jetstack/charts
 

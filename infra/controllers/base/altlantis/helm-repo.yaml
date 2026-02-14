@@ -5,6 +5,7 @@ metadata:
   name: runatlantis
   namespace: flux-system
 spec:
+  type: oci
   interval: 12h
-  url: https://runatlantis.github.io/helm-charts
+  url: oci://ghcr.io/runatlantis/charts
 

@@ -6,8 +6,9 @@ metadata:
   name: istio
   namespace: flux-system
 spec:
+  type: oci
   interval: 12h
-  url: https://istio-release.storage.googleapis.com/charts
+  url: oci://gcr.io/istio-release/charts
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
