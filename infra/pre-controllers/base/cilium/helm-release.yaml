@@ -71,6 +71,8 @@ spec:
 
     # ============================  L2 Announcements  ============================
     # https://docs.cilium.io/en/stable/network/l2-announcements/
+    l2announcements:
+      enabled: true
     k8sClientRateLimit:
       qps: 100
       burst: 200
